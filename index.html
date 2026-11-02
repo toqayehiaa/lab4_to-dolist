@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo App</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="card">
+      <h1>Todo App</h1>
+
+      <!-- Input area -->
+      <div class="input-area">
+        <input id="todoInput" type="text" placeholder="What needs doing?" />
+        <button id="addBtn" class="add-btn">Add</button>
+      </div>
+
+      <!-- Tip + filter buttons -->
+      <div class="toolbar">
+        <span class="tip">Tip: double-click a todo to edit. Press Enter to save.</span>
+        <div id="filters" class="filters">
+          <button class="filter active" data-filter="all">All</button>
+          <button class="filter" data-filter="active">Active</button>
+          <button class="filter" data-filter="completed">Completed</button>
+        </div>
+      </div>
+
+      <!-- The todos are added here by app.js -->
+      <ul id="todoList" class="todo-list"></ul>
+
+      <!-- Footer -->
+      <div class="footer">
+        <span id="count">0 items left</span>
+        <div class="footer-buttons">
+          <button id="clearCompleted" class="small-btn">Clear completed</button>
+          <button id="clearAll" class="small-btn">Clear all</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- We load the JavaScript that TypeScript generated (app.ts -> app.js) -->
+    <script src="app.js"></script>
+  </body>
+</html>
